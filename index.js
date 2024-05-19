@@ -34,8 +34,8 @@ console.log("I have been started!!!!");
 //* this will spread the value
 
 //*5 for simple array and object destructuring
-let users = ["Ram", "Jon"];
-let [user1, user2] = users;
+// let users = ["Ram", "Jon"];
+// let [user1, user2] = users;
 
 // console.warn(user1);
 // console.warn(user2);
@@ -175,3 +175,53 @@ let [user1, user2] = users;
 //*25
 // let a = 31;
 // console.log(a % 2);
+//*26
+
+// hoisting
+// console.log(user1);
+
+// var user1 = "sumit";
+// console.log(greet.call());
+
+// function greet() {
+//   return "Hello Developers";
+// }
+
+//* imp question
+// var length =  10 ;
+// function fn () {
+//   console.log(this.length);
+// }
+
+// const userData = {
+//   length: 5,
+//   method: function (fn) {
+//     fn();
+//     arguments[0]();
+//   }
+// }
+// userData.method(fn, 1);
+
+//*
+
+// (function () {
+//   console.log(1);
+//   setTimeout(function () {
+//     console.log(2);
+//   }, 1000);
+//   setTimeout((function () {
+//     console.log(3);
+//   })(), 0);
+//   console.log(4);
+// })();
+
+(function () {
+  console.log(1);
+  setTimeout(function () {
+    console.log(2);
+  }, 1000);
+  setTimeout(() => {
+    console.log(3);
+  }, 0);
+  console.log(4);
+})();
